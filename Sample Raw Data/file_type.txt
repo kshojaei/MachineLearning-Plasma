@@ -1,0 +1,6 @@
+
+
+
+The files starting with "1x" represent current-voltage characteristics measured by a Langmuir Probe. 
+
+The files starting with "s" represent the correseponding plasma emission spectra obtained by optical emission spectroscopy.

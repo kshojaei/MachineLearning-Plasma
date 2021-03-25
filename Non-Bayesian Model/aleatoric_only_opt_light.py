@@ -22,9 +22,9 @@ combined_csv = pd.concat([pd.read_csv(f) for f in all_filenames ])
 combined_csv.to_csv( "stars_combined.csv", index=False, encoding='utf-8-sig')
 '''
 #from keras import backened as K
-
+# Import the processed data from the appropriate path directory. 
 # Importing ML input/Output file
-data = pd.read_csv('final_combined.csv')
+data = pd.read_csv('Processed_Data.csv')
 # Inputs 
 p1 = data['# p_696_57']
 p2 = data[' p_706_73']

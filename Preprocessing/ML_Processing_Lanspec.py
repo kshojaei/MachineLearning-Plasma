@@ -12,9 +12,9 @@ import os
 ########
 # Inputs:
 R = 30           # resistance (ohm)
-M = 1           # X parameter
+M = 1            # X parameter
 D = 0.000127     # Probe Diameter [m]
-L = 0.005128       # Probe Height [m]
+L = 0.005128     # Probe Height [m]
 ########
 # Langmuri Probe Data 
 T_e = []; n_e = []; n_i = []
@@ -29,6 +29,8 @@ p_800_70_ = []; p_801_57_ = []; p_810_43_ = []; p_811_58_ = []
 p_826_49_ = []; p_840_90_ = []; p_842_53_ = []; p_852_21_ = []
 p_912_33_ = []; p_922_48_ = []; p_965_80_ = []
 max_param = []
+# Create a folder on a desktop and name it "ML" and choose it as path_directory
+# Drop in Langmuir Probe and Spectroscopy Data into this folder for preprocessing
 # Path Directory
 path_dir = r'/Users/scienceman/Desktop/ML/'
 def Langmuir_Data():
@@ -46,8 +48,9 @@ def Spectroscopic_Data():
                 result.append(os.path.join(root,d))  
     return result
 # Calibration File for Spectroscopic Measurements
-pcaldir = r'/Users/scienceman/Desktop/Deep_Learning/Spectro_Lang_Data/ML_Data/'
-thor_dir = pcaldir + 'SLS201L_Spectrum.csv'
+# Include path directory '/Users/scienceman/Desktop/Deep_Learning/Spectro_Lang_Data/ML_Data/'
+pcaldir = r'path_directory'
+thor_dir = pcaldir + 'SLS201L_Spectrum_Calibration.csv'
 cal_dir = pcaldir + 'lamp.csv'
 calib = pd.read_csv(cal_dir)
 # Calibration File on Thors lab for SLS201L Red Lamp
